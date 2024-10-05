@@ -3,12 +3,14 @@
     justify-content: space-between;
     align-items: center;
     background-color: #1c1c1c;
-    margin: 50px 100px;
+    /* margin: 50px 100px; */
+    width: 100vw;
   }
   
   .cabecalho .logo a h3 {
     font-size: 30px;
     font-weight: 400;
+    margin: 30px 80px;
     transition: 0.2s;
   }
   
@@ -16,12 +18,17 @@
     color: #39FF14;
     transform: scale(1.05);
   }
+
+  .cabecalho .redes {
+    margin-right: 80px;
+  }
   
   .cabecalho .redes ul {
     display: flex;
     justify-content: center;
     gap: 30px;
     margin-right: 30px;
+    list-style: none;
   }
   
   .cabecalho .redes ul li a i, .roda-pe .redes ul li a i {
