@@ -6,12 +6,18 @@
     /* margin: 50px 100px; */
     width: 100vw;
   }
+
+  .cabecalho .logo a {
+    text-decoration: none;
+   }
   
   .cabecalho .logo a h3 {
     font-size: 30px;
     font-weight: 400;
     margin: 30px 80px;
-    transition: 0.2s;
+    transition: 0.2s ease-in-out;
+    color: #f9f9f9;
+    
   }
   
   .cabecalho .logo a:hover h3 {
@@ -33,7 +39,8 @@
   
   .cabecalho .redes ul li a i, .roda-pe .redes ul li a i {
     font-size: 30px;
-    transition: 0.2s;
+    transition: 0.2s ease-in-out;
+    color: #f9f9f9;
   }
   
   .cabecalho .redes ul li a:hover i, .roda-pe .redes ul li a:hover i {

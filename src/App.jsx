@@ -1,6 +1,6 @@
 import Header from './components/header/header.jsx'
 import Home from './components/home/home.jsx'
-//import './App.css'
+import Habilidades from './components/habilidades/habilidades.jsx'
 
 function App() {
 
@@ -8,6 +8,7 @@ function App() {
     <>
      <Header />
      <Home />
+     <Habilidades />
     </>
   )
 }

@@ -1,57 +1,56 @@
 .home {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #fff;
-    padding: 50px 100px;
-    gap: 50px;
-    padding-bottom: 50px;
     background-color: #1c1c1c;
-    width: 100vw;
-  }
-  
-  .home .home-img {
-    order: 2;
-  }
-  
-  .home .home-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 50px 80px;
+}
+
+.home .home-img {
+    max-width: 490px;
     order: 1;
-  }
-  
-  .home .home-img img {
-    max-width: 500px;
-    max-height: 500px;
+}
+
+.home .home-img img {
+    width: 100%;
     border-radius: 50%;
-    border: 5px solid #39FF14;
-  
-  }
-  
-  .home .home-text h1 {
-    font-size: 60px;
+    border: 5px solid #39ff14;
+}
+
+.home .home-text {
+    color: #f9f9f9;
+    max-width: 450px;
+}
+
+.home .home-text h1 {
     font-weight: 700;
-    margin-bottom: 30px;
-    max-width: 500px;
-  }
-  
-  .home .home-text h1 span {
-    color: #39FF14;
-    border-bottom: 5px solid #39FF14;
-  }
-  
-  .home .home-text p {
-    font-size: 15px;
-    margin-bottom: 30px;
-    max-width: 500px;
-  }
-  
-  .home .home-text a {
-    font-size: 24px;
-    margin-bottom: 30px;
-    transition: 0.4s;
+    font-size: 50px;
+    padding-bottom: 30px;
+}
+
+.home .home-text h1 span {
+    color: #39ff14;
+    border-bottom: 5px solid #39ff14;
+}
+
+
+.home .home-text p {
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+
+.home .home-text a {
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 600;
+    color: #f9f9f9;
     padding-bottom: 10px;
-    border-bottom: 3px solid #39FF14;
-  }
-  
-  .home .home-text a:hover {
-    color: #39FF14;
-  }
+    border-bottom: 5px solid #39ff14;
+    transition: 0.4s ease-in-out;
+}
+
+.home .home-text a:hover {
+    color: #39ff14;
+}

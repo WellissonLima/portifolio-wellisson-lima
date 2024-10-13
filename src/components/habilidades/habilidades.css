@@ -1,0 +1,26 @@
+.habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 50px 80px;
+    background-color: #1c1c1c;
+  }
+  
+  .habilidades div {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .habilidades h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #39ff14;
+  }
+  
+  .habilidades p {
+    font-size: 1.1em;
+    color: #555;
+  }
+  

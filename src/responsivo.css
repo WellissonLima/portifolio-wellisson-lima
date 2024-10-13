@@ -1,27 +1,33 @@
 @media(max-width: 1024px) {
     .cabecalho {
-        padding: 50px 50px;
+        padding: 30px 50px;
     }
     
     .home {
-        padding: 50px 50px;
+        padding: 30px 50px;
+        flex-direction: column;
     }
 
     .home .home-img img {
-        max-width: 400px;
-        max-height: 400px;
+        max-width: 500px;
+    }
+
+    .home .home-text {
+        order: 1;
+        text-align: center;
+        max-width: 500px;
     }
 
     .habilidades {
-        margin: 50px 50px;
+        padding: 30px 50px;
     }
 
     .projetos {
-        margin: 50px 50px;
+        padding: 30px 50px;
     }
 
     .contato {
-        margin: 0 50px;
+        padding: 0 50px;
     }
 
     .contato .contato-input {
