@@ -1,5 +1,6 @@
 import React from 'react';
 import { useGitHubAutomatedRepos, StackIcons } from 'github-automated-repos';
+import './projects.css';
 //import { GitHubRepos } from 'github-automated-repos';
 
 
@@ -15,31 +16,29 @@ const Projeto = () => {
         <div>
             <ul>
                 {data.map((item, index) => (
-                    <div>
-                        <li key={index}>
-                            {item.banner ? (<img className='banner' src={item.banner} alt={item.name} />) : (<div></div>)}
+                    <li key={index}>
+                        {item.banner ? (<img className='banner' src={item.banner} alt={item.name} />) : (<div>Sem imagem disponível</div>)}
 
-                            <h1>{item.name}</h1>
+                        <h2>{item.name}</h2>
 
-                            <p>{item.description.slice(0, 170)} [...]</p>
+                        <p>{item.description.slice(0, 170)} [...]</p>
 
-                            <div>
-                                <a href={item.homepage} target='_blank' rel='noreferrer'>
-                                    <h3>🌐 Site</h3>
-                                </a>
-                                <a href={item.html_url} target='_blank' rel='noreferrer'>🔗 Código</a>
-                            </div>
+                        <div>
+                            <a href={item.homepage} target='_blank' rel='noreferrer'>
+                                <h3>🌐 Site</h3>
+                            </a>
+                            <a href={item.html_url} target='_blank' rel='noreferrer'>🔗 Código</a>
+                        </div>
 
-                            <div>
-                                {item.topics.map((icon, index) => (
-                                    <StackIcons
-                                        key={index}
-                                        itemTopics={icon}
-                                    />
-                                ))}
-                            </div>
-                        </li>
-                    </div>
+                        <div>
+                            {item.topics.map((icon, index) => (
+                                <StackIcons
+                                    key={index}
+                                    itemTopics={icon}
+                                />
+                            ))}
+                        </div>
+                    </li>
                 ))}
             </ul>
         </div>
