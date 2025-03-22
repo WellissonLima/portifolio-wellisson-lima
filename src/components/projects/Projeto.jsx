@@ -8,29 +8,31 @@ const Projeto = () => {
     const { data, isLoading, error } = useGitHubAutomatedRepos("wellissonlima", "repos");
     console.log("Repositórios com a tag 'react':", data);
 
-    if (isLoading) return <div> loading...</div>
-    if (error) return <div>Erro ao carregar repositórios</div>;
-    if (!data || data.length === 0) return <div>Nenhum repositório encontrado</div>;
+    if (isLoading) return <div className='loading'> loading...</div>
+    if (error) return <div className='error'>Erro ao carregar repositórios</div>;
+    if (!data || data.length === 0) return <div className='empty'>Nenhum repositório encontrado</div>;
 
     return (
-        <div>
-            <ul>
+        <section className='projetos'>
+            <h2 className='titulo'>Meus Projetos</h2>
+
+            <ul className='github-repos-container'>
                 {data.map((item, index) => (
-                    <li key={index}>
-                        {item.banner ? (<img className='banner' src={item.banner} alt={item.name} />) : (<div>Sem imagem disponível</div>)}
+                    <li key={index} className='github-repo-card'>
+                        {item.banner ? (<img className='banner' src={item.banner} alt={item.name} />) : (<div className='no-image'>Sem imagem disponível</div>)}
 
-                        <h2>{item.name}</h2>
+                        <h3 className='projeto-name'>{item.name}</h3>
 
-                        <p>{item.description.slice(0, 170)} [...]</p>
+                        <p className='projeto-descricao'>{item.description.slice(0, 170)} [...]</p>
 
-                        <div>
-                            <a href={item.homepage} target='_blank' rel='noreferrer'>
+                        <div className='projeto-links'>
+                            <a href={item.homepage} target='_blank' rel='noreferrer' className='projeto-link'>
                                 <h3>🌐 Site</h3>
                             </a>
-                            <a href={item.html_url} target='_blank' rel='noreferrer'>🔗 Código</a>
+                            <a href={item.html_url} target='_blank' rel='noreferrer' className='projeto-link'>🔗 Código</a>
                         </div>
 
-                        <div>
+                        <div className='projeto-icons'>
                             {item.topics.map((icon, index) => (
                                 <StackIcons
                                     key={index}
@@ -41,7 +43,7 @@ const Projeto = () => {
                     </li>
                 ))}
             </ul>
-        </div>
+        </section>
     )
 }
 
