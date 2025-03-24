@@ -1,4 +1,71 @@
-.banner {
-    width: 250px;
+.projetos {
+    padding: 30px 0 70px;
+    background-color: #2d2d2d;
 }
 
+.projetos h2 {
+    text-align: center;
+    padding: 60px 0;
+    font-size: 45px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #39FF14;
+}
+
+.projetos .github-repos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.github-repo-card {
+    background-color: #121212;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    max-width: 300px;
+}
+
+.github-repo-card .banner {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.github-repo-card:hover {
+    transform: translateY(-5px);
+}
+
+.github-repo-card .projeto-name {
+    color: #39FF14;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.github-repo-card .projeto-descricao {
+    color: #bbb;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.github-repo-card .projeto-link {
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #39FF14;
+    color: #121212;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.github-repo-card a:hover {
+    background-color: #2fff20;
+}
+
+.github-repo-card .projeto-links {
+    margin-bottom: 10px;
+}
