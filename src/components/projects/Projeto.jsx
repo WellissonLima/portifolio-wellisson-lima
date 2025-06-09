@@ -1,6 +1,7 @@
 import React from 'react';
 import { useGitHubAutomatedRepos, StackIcons } from 'github-automated-repos';
 import './projects.css';
+import Loader from '../Loader';
 //import { GitHubRepos } from 'github-automated-repos';
 
 
@@ -8,7 +9,7 @@ const Projeto = () => {
     const { data, isLoading, error } = useGitHubAutomatedRepos("wellissonlima", "repos");
     console.log("Repositórios com a tag 'react':", data);
 
-    if (isLoading) return <div className='loading'> loading...</div>
+    if (isLoading) return <Loader />
     if (error) return <div className='error'>Erro ao carregar repositórios</div>;
     if (!data || data.length === 0) return <div className='empty'>Nenhum repositório encontrado</div>;
 
